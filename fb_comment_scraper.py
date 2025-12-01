@@ -81,10 +81,8 @@ class FbCommentScraper:
         """
         Gets the html source for the given post's page
 
-        Returns
-        -------
-        str
-            HTML source of the post's page
+        :return: HTML source of the post's page
+        :rtype: str
         """
         self.driver.get(self.post_url)
         print("Opened post page")
@@ -135,6 +133,12 @@ class FbCommentScraper:
         return self.driver.page_source
 
     def parse_comments(self) -> list[tuple[str, str, str]]:
+        """
+        Parses the post comments from the loaded page's html
+
+        :return: List of parsed comments, stored as tuples of name, comment, and comment url
+        :rtype: list[tuple[str, str, str]]
+        """
         page = BeautifulSoup(self.html, 'html.parser')
 
         comment_divs = page.find_all("div", attrs={"aria-label": re.compile(r"^Comment by")})

@@ -1,6 +1,7 @@
 # Project-specific files
 env_secrets.py
 comments.txt
+.vscode/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

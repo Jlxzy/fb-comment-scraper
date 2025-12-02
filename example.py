@@ -11,5 +11,5 @@ comments = scraper.comments # list of comment tuples, each comment containing st
 
 # an example of processing the retrieved comments, which saves each comment to a text file
 with open("comments.txt", "w") as f:
-    for name, text, link in scraper.comments:
+    for name, text, link in comments:
         f.write(f"{name}: {text} - {link}\n")

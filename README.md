@@ -1,11 +1,26 @@
-# Facebook Comment Scraper
+# Facebook Comment Scraper <!-- omit from toc -->
 
 *Author - Joel Foster*
 
 A Python library that can be used to scrape comments from a Facebook post without API access. Requires slight human
 interaction to bypass anti-bot measures.
 
+- [Requirements](#requirements)
+- [Usage](#usage)
+- [Processing results](#processing-results)
+  - [Storing comments in a text file](#storing-comments-in-a-text-file)
+  - [Picking a random comment](#picking-a-random-comment)
+- [Examples](#examples)
+
+
+## Requirements
+
+Ensure the requirements for the library are installed in your active python environment by executing the command:
+``` pip install -r requirements.txt ``` from the root of this repository.
+
 ## Usage
+
+*A simple full example using the class can be found in [example.py](./examples/example.py)*
 
 First, copy the [fb_comment_scraper.py](fb_comment_scraper.py) file into the working directory of your project, then
 import the class into your project using:
@@ -64,3 +79,13 @@ import random
 
 random_comment = random.choice(scraper.comments)
 ```
+*A simple full implementation of this can be found in [random_example.py](./examples/random_example.py).*
+
+## Examples
+
+Below are some example programs using the library:
+
+- [example.py](./examples/example.py) - basic example which scrapes comments and stores the results in a text
+  file
+- [random_example.py](./examples/random_example.py) - basic example which picks a random commenter from the results of
+  the scraping process
